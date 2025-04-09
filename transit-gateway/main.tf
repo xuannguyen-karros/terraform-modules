@@ -37,7 +37,7 @@ resource "aws_ec2_transit_gateway" "this" {
   vpn_ecmp_support                   = var.enable_vpn_ecmp_support ? "enable" : "disable"
   dns_support                        = var.enable_dns_support ? "enable" : "disable"
   transit_gateway_cidr_blocks        = var.transit_gateway_cidr_blocks
-  security_group_referencing_support = var.enable_sg_referencing_support ? "enable" : "disable"
+  # security_group_referencing_support = var.enable_sg_referencing_support ? "enable" : "disable"
 
   timeouts {
     create = try(var.timeouts.create, null)
